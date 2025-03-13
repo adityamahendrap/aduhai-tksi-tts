@@ -27,8 +27,8 @@ function TextToSpeech() {
 
   const [amplitude, setAmplitude] = useState(100);
   const [speed, setSpeed] = useState(200);
-  const [pitch, setPitch] = useState(50);
-  const [pitchRange, setPitchRange] = useState(0);
+  const [pitch, setPitch] = useState(35);
+  const [pitchRange, setPitchRange] = useState(90);
   const [wordGap, setWordGap] = useState(0);
   const [voice, setVoice] = useState("en");
   const [spellPunctuation, setSpellPunctuation] = useState("");
@@ -223,8 +223,10 @@ function TextToSpeech() {
               value={voice}
               onChange={(e) => setVoice(e.target.value)}
             >
-              <option value="en">English</option>
               <option value="id">Indonesia</option>
+              <option value="en">English</option>
+              <option value="en-french-1">English (German)</option>
+              <option value="es">Spanish</option>
             </select>
           </div>
         </div>
