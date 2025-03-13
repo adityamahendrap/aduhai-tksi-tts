@@ -1,10 +1,15 @@
-import "./App.css";
+import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import TextToSpeech from './pages/TextToSpeech';
+import SpeechToText from './pages/SpeechToText';
 
 function App() {
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-100">
-      <h1 className="text-4xl font-bold text-blue-500">Hello, Tailwind!</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/tts" element={<TextToSpeech />} />
+        <Route path="/stt" element={<SpeechToText/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
